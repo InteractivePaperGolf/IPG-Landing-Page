@@ -1,0 +1,143 @@
+/* ###################################################### */
+/* Reset */
+/* ###################################################### */
+
+/*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}img,embed,iframe,object,audio,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0;text-align:left}
+
+/* ###################################################### */
+/* General */
+/* ###################################################### */
+
+* {
+  box-sizing: border-box;
+  font-family: "museo-sans-rounded", "museo-sans", "Open Sans", "Helvetica", "Arial", sans-serif;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background-color: #fff;
+  color: #23252B;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ###################################################### */
+/* Layout */
+/* ###################################################### */
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  width: 100%;
+  flex: 1;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* ###################################################### */
+/* Modules */
+/* ###################################################### */
+
+/* Typo */
+
+h1 {
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-top: 3vh;
+  color: #04C956;
+  letter-spacing: 3px;
+  animation: tracking-in-expand-fwd 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 6s both;
+}
+
+footer a {
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: #ced4da;
+}
+
+/* ###################################################### */
+/* Logo */
+/* ###################################################### */
+
+.logo {
+  width: 100px;
+  height: 151px;
+  position: relative;
+}
+
+.logo__fill, .logo__stroke {
+  position: absolute;
+}
+
+.logo__fill {
+  opacity: 0;
+  animation: fill-animation 2s ease-in-out 4s forwards;
+}
+
+.logo__stroke {
+  opacity: 1;
+  animation: stroke-animation 2s ease-in-out 4s forwards;
+}
+
+/* Animation */
+
+.logo__stroke .hole {
+  stroke-dasharray: 375;
+  stroke-dashoffset: 375;
+  animation: hole-animation 1s ease-in-out 2.5s forwards;
+}
+
+@keyframes hole-animation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.logo__stroke .icon {
+  stroke-dasharray: 2080;
+  stroke-dashoffset: 2080;
+  animation: icon-animation 3s ease-in-out forwards;
+}
+
+@keyframes icon-animation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes stroke-animation {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fill-animation {
+  to {
+    opacity: 1;
+  }
+}
