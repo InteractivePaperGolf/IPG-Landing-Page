@@ -22,7 +22,8 @@ body {
   color: #23252B;
   line-height: 1.5;
   font-size: 1rem;
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1JyBoZWlnaHQ9JzUnPgo8cmVjdCB3aWR0aD0nNScgaGVpZ2h0PSc1JyBmaWxsPScjZmZmJy8+CjxyZWN0IHdpZHRoPScxJyBoZWlnaHQ9JzEnIGZpbGw9JyNjY2MnLz4KPC9zdmc+");
+  background-image: url('../img/bg-pattern.svg');
+  background-size: 10px;
   background-repeat: repeat;
 }
 
