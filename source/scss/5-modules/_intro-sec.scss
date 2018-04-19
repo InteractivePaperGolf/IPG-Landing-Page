@@ -1,0 +1,71 @@
+// Intro
+
+.intro-sec {
+    &__logo {
+
+    }
+
+    &__logo--mobile {
+        width: 30vw;
+        max-height: 25vh;
+        position: relative;
+
+        // Animation Stuff
+
+        #Symbol_Stroke, #Symbol_Fill {
+            position: absolute;
+        }
+
+        #Symbol_Stroke {
+            opacity: 1;
+            animation: stroke-animation 2s ease-in-out 4s forwards;
+
+            #Symbol_Hole {
+                opacity: 0;
+                stroke-dasharray: 375;
+                stroke-dashoffset: 375;
+                animation: line-animation 1s ease-in-out 2.5s forwards;
+            }
+
+            #Symbol_Shape {
+                opacity: 0;
+                stroke-dasharray: 2080;
+                stroke-dashoffset: 2080;
+                animation: line-animation 3s ease-in-out forwards;
+            }
+        }
+
+        #Symbol_Fill {
+            opacity: 0;
+            animation: fill-animation 2s ease-in-out 4s forwards;
+        }
+    }
+
+    &__logo--desktop {
+        display: none;
+    }
+}
+
+// Keyframes
+
+@keyframes line-animation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 1;
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes stroke-animation {
+    to {
+      opacity: 0;
+    }
+}
+  
+@keyframes fill-animation {
+    to {
+      opacity: 1;
+    }
+}

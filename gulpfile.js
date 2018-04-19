@@ -17,14 +17,16 @@ var autoprefixer = require('gulp-autoprefixer'),
 
 
 // paths
-var styleSrc = 'source/sass/**/*.sass',
+var styleSrc = 'source/scss/**/*.scss',
     styleDest = 'build/assets/css/',
     htmlSrc = 'source/*.html',
     htmlDest = 'build/',
     vendorSrc = 'source/js/vendors/',
     vendorDest = 'build/assets/js/',
     scriptSrc = 'source/js/*.js',
-    scriptDest = 'build/assets/js/';
+    scriptDest = 'build/assets/js/',
+    imgSrc = 'source/img/**/*',
+    imgDest = 'build/assets/img/*';
 
 
 
@@ -45,12 +47,19 @@ gulp.task('html', function() {
 });
 
 
-// Compiles all SASS files
+// Compiles all SCSS files
 gulp.task('sass', function() {
-    gulp.src('source/sass/**/*.sass')
+    gulp.src('source/scss/**/*.scss')
         .pipe(plumber())
         .pipe(sass({
-            style: 'compressed'
+            outputStyle: 'expanded'
+        }))
+        .pipe(rename({
+            basename: 'style'
+        }))
+        .pipe(gulp.dest('build/assets/css'))
+        .pipe(sass({
+            outputStyle: 'compressed'
         }))
         .pipe(rename({
             basename: 'style',
@@ -61,6 +70,7 @@ gulp.task('sass', function() {
 
 gulp.task('images', function() {
     gulp.src('source/img/*')
+        .pipe(plumber())
         .pipe(images())
         .pipe(gulp.dest('build/assets/img'));
 });
@@ -77,10 +87,9 @@ gulp.task('scripts', function() {
 gulp.task('vendors', function() {
     gulp.src(
             [
-                'source/js/vendors/jquery.min.js',
+                'source/js/vendors/vue.min.js',
                 'source/js/vendors/*.js'
             ])
-        .pipe(plumber())
         .pipe(concat('vendors.js'))
         .pipe(uglify())
         .pipe(gulp.dest('build/assets/js'));
@@ -100,6 +109,7 @@ gulp.task('watch', function(){
     });
 
     gulp.watch(htmlSrc,['html']);
+    gulp.watch(imgSrc,['images']);
     gulp.watch(styleSrc,['sass']);
     gulp.watch(scriptSrc,['scripts']);
     gulp.watch(vendorSrc,['vendors']);
@@ -109,4 +119,4 @@ gulp.task('watch', function(){
 
 
 // use default task to launch Browsersync and watch JS files
-gulp.task('default', [ 'html', 'sass', 'scripts', 'vendors', 'watch'], function () {});
+gulp.task('default', [ 'html', 'images', 'sass', 'scripts', 'vendors', 'watch'], function () {});

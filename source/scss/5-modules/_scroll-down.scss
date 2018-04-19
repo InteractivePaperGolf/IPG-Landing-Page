@@ -1,0 +1,64 @@
+// Scroll Down
+
+.scroll-down {
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: inline-block;
+    color: $font-color;
+    transition: opacity 0.3s ease;
+    padding-top: 60px;
+
+    &:hover {
+        opacity: 0.5;
+    }
+
+    &__ele {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 30px;
+        height: 50px;
+        margin-left: -15px;
+        border: 2px solid $font-color;
+        border-radius: 50px;
+
+        &::before {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            content: '';
+            width: 8px;
+            height: 8px;
+            margin-left: -4px;
+            background-color: $brand;
+            border-radius: 100%;
+            animation: scroll-down 2s infinite;
+        }
+    }
+
+    &__text {
+        margin: 0;
+    }
+}
+
+// Keyframes
+
+@keyframes scroll-down {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+      }
+      40% {
+        opacity: 1;
+      }
+      80% {
+        transform: translate(0, 20px);
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+}

@@ -1,0 +1,60 @@
+// #######################################
+// Colors
+// #######################################
+    
+// Papergolf Colors
+$white: #FFF;
+$grey-dark: #23252b;
+$grey: #3D4046;
+$grey-light: #77797D;
+$green-dark: #04A547;
+$green: #04C956;
+$green-light: #61FF7E;
+
+// Website
+$brand: $green;
+$brand-light: $green-light;
+$brand-dark: $green-dark;
+$background: $white;
+
+// #######################################
+// Layout
+// #######################################
+
+$wrapper: 1140px;
+$wrapper-padding: 20px;
+
+// #######################################
+// Typography
+// #######################################
+
+// Family
+$font: 'museo-sans-rounded', 'museo-sans', helvetica, arial, sans-serif;
+$font-light: 300;
+$font-normal: 500;
+$font-bold: 700;
+
+// Color
+$font-color: $grey;
+$font-dark-color: $grey-dark;
+$font-light-color: $grey-light;
+
+// Font Sizes
+// Use these to control fluid font sizes
+$font-size-min: 16;
+$font-size-max: 20;
+$screen-min: 460px;
+$screen-max: 1140px;
+
+$size-small-min: $font-size-min * 0.75 * 1px;
+$size-small-max: $font-size-max * 0.75 * 1px;
+$size-min: $font-size-min * 1px;
+$size-max: $font-size-max * 1px;
+$size-h4-min: $font-size-min * 1.333 * 1px;
+$size-h4-max: $font-size-max * 1.333 * 1px;
+$size-h3-min: $font-size-min * 1.777 * 1px;
+$size-h3-max: $font-size-max * 1.777 * 1px;
+$size-h2-min: $font-size-min * 2.369 * 1px;
+$size-h2-max: $font-size-max * 2.369 * 1px;
+$size-h1-min: $font-size-min * 3.157 * 1px;
+$size-h1-max: $font-size-max * 3.157 * 1px;
