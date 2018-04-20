@@ -1,5 +1,9 @@
 // Base Typography
 
+html {
+    font-size: 16px;
+}
+
 body {
     font-family: $font;
     font-weight: $font-normal;
@@ -10,22 +14,22 @@ body {
 
 // Headings
 
-h1 {
-    font-weight: 900;
+h1, .h1 {
+    font-weight: 700;
     @include fluid-type(font-size, $screen-min, $screen-max, $size-h1-min, $size-h1-max);
 }
 
-h2 {
+h2, .h2 {
     font-weight: 700;
     @include fluid-type(font-size, $screen-min, $screen-max, $size-h2-min, $size-h2-max);
 }
 
-h3 {
+h3, .h3 {
     font-weight: 700;
     @include fluid-type(font-size, $screen-min, $screen-max, $size-h3-min, $size-h3-max);
 }
 
-h4 {
+h4, .h4 {
     font-weight: 500;
     @include fluid-type(font-size, $screen-min, $screen-max, $size-h4-min, $size-h4-max);
 }

@@ -5,6 +5,22 @@ footer {
     text-align: center;
 
     .footer-btns {
-        margin-bottom: 20px;
+        margin-bottom: 32px;
+    }
+
+    // Breakpoint 
+
+    @include breakpoint(small) {
+        @include grid() {
+            grid-column: 2 / span 1;
+            grid-row: 3 / span 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .footer-btns {
+                order: 1;
+            }
+        }
     }
 }

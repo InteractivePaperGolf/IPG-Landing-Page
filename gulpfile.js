@@ -87,7 +87,7 @@ gulp.task('scripts', function() {
 gulp.task('vendors', function() {
     gulp.src(
             [
-                'source/js/vendors/vue.min.js',
+                'source/js/vendors/vue.js',
                 'source/js/vendors/*.js'
             ])
         .pipe(concat('vendors.js'))

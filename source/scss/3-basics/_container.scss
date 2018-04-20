@@ -6,9 +6,26 @@
     padding-right: $wrapper-padding;
     margin-left: auto;
     margin-right: auto;
+
+    // Breakpoint
+
+    @include breakpoint(medium) {
+        @include grid() {
+            padding: 0;
+            margin: 0;
+        }
+    }
 }
 
 .wrapper-padding {
     padding-left: $wrapper-padding;
     padding-right: $wrapper-padding;
+
+    // Breakpoint
+
+    @include breakpoint(medium) {
+        @include grid() {
+            padding: 0;
+        }
+    }
 }

@@ -1,0 +1,18 @@
+// Body
+
+body {
+
+// Breakpoint 
+
+    @include breakpoint(medium) {
+        @include grid() {
+            
+            // Grid
+
+            display: grid;
+            grid-template-columns: 1fr 1140px 1fr;
+            grid-template-rows: 100vh auto 150px;
+            grid-row-gap: 20px;
+        }
+    }
+}
