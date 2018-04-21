@@ -858,6 +858,7 @@ footer .footer-btns {
   position: absolute;
   top: 24px;
   right: 10vw;
+  z-index: 20;
 }
 
 .showcase-sec__img {
