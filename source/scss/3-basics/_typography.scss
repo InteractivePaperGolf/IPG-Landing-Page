@@ -6,7 +6,7 @@ html {
 
 body {
     font-family: $font;
-    font-weight: $font-normal;
+    font-weight: $font-light;
     @include fluid-type(font-size, $screen-min, $screen-max, $size-min, $size-max);
     line-height: 1.5;
     color: $font-color;
