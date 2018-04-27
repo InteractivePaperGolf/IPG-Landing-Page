@@ -344,7 +344,7 @@ body {
   background-color: #FFF;
   background-attachment: fixed;
   background-image: url("../img/bg-pattern.svg");
-  background-size: 10px;
+  background-size: 20px;
 }
 
 .wrapper {
@@ -377,15 +377,15 @@ body {
   }
 }
 
-html {
+:root {
   font-size: 16px;
 }
 
 body {
-  font-family: "museo-sans", helvetica, arial, sans-serif;
+  font-family: "proxima-nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 300;
   line-height: 1.5;
-  color: #3D4046;
+  color: #495057;
 }
 
 body {
@@ -394,93 +394,90 @@ body {
 
 @media screen and (min-width: 460px) {
   body {
-    font-size: calc(0.58824vw + 13.29412px);
+    font-size: calc(0.29412vw + 14.64706px);
   }
 }
 
 @media screen and (min-width: 1140px) {
   body {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
-h1, .h1 {
+h1,
+h2,
+h3,
+h4 {
+  font-family: "proxima-soft", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #343A40;
   font-weight: 700;
 }
 
 h1, .h1 {
-  font-size: 50.512px;
+  font-weight: 800;
+}
+
+h1, .h1 {
+  font-size: 33px;
 }
 
 @media screen and (min-width: 460px) {
   h1, .h1 {
-    font-size: calc(1.85706vw + 41.96953px);
+    font-size: calc(3.52941vw + 16.76471px);
   }
 }
 
 @media screen and (min-width: 1140px) {
   h1, .h1 {
-    font-size: 63.14px;
+    font-size: 57px;
   }
 }
 
 h2, .h2 {
-  font-weight: 700;
-}
-
-h2, .h2 {
-  font-size: 37.904px;
+  font-size: 28px;
 }
 
 @media screen and (min-width: 460px) {
   h2, .h2 {
-    font-size: calc(1.39353vw + 31.49376px);
+    font-size: calc(2.20588vw + 17.85294px);
   }
 }
 
 @media screen and (min-width: 1140px) {
   h2, .h2 {
-    font-size: 47.38px;
+    font-size: 43px;
   }
 }
 
 h3, .h3 {
-  font-weight: 700;
-}
-
-h3, .h3 {
-  font-size: 28.432px;
+  font-size: 23px;
 }
 
 @media screen and (min-width: 460px) {
   h3, .h3 {
-    font-size: calc(1.04529vw + 23.62365px);
+    font-size: calc(1.32353vw + 16.91176px);
   }
 }
 
 @media screen and (min-width: 1140px) {
   h3, .h3 {
-    font-size: 35.54px;
+    font-size: 32px;
   }
 }
 
 h4, .h4 {
-  font-weight: 500;
-}
-
-h4, .h4 {
-  font-size: 21.328px;
+  font-size: 19px;
 }
 
 @media screen and (min-width: 460px) {
   h4, .h4 {
-    font-size: calc(0.78412vw + 17.72106px);
+    font-size: calc(0.73529vw + 15.61765px);
   }
 }
 
 @media screen and (min-width: 1140px) {
   h4, .h4 {
-    font-size: 26.66px;
+    font-size: 24px;
   }
 }
 
@@ -490,34 +487,34 @@ a {
 }
 
 .bigger {
-  font-size: 21.328px;
+  font-size: 19px;
 }
 
 @media screen and (min-width: 460px) {
   .bigger {
-    font-size: calc(0.78412vw + 17.72106px);
+    font-size: calc(0.73529vw + 15.61765px);
   }
 }
 
 @media screen and (min-width: 1140px) {
   .bigger {
-    font-size: 26.66px;
+    font-size: 24px;
   }
 }
 
 .smaller {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 @media screen and (min-width: 460px) {
   .smaller {
-    font-size: calc(0.44118vw + 9.97059px);
+    font-size: calc(0.14706vw + 12.32353px);
   }
 }
 
 @media screen and (min-width: 1140px) {
   .smaller {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 
@@ -582,7 +579,7 @@ main .top-bar {
   background-color: #FFF;
   background-attachment: fixed;
   background-image: url("../img/bg-pattern.svg");
-  background-size: 10px;
+  background-size: 20px;
   z-index: 100;
 }
 
@@ -771,7 +768,7 @@ footer .footer-btns {
   transform: translateX(-50%);
   z-index: 10;
   display: inline-block;
-  color: #3D4046;
+  color: #495057;
   transition: opacity 0.3s ease;
   padding-top: 60px;
 }
@@ -787,7 +784,7 @@ footer .footer-btns {
   width: 30px;
   height: 50px;
   margin-left: -15px;
-  border: 2px solid #3D4046;
+  border: 2px solid #495057;
   border-radius: 50px;
 }
 
@@ -844,11 +841,10 @@ footer .footer-btns {
   height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-top: 20px solid #04C956;
+  border-bottom: 20px solid #04C956;
   position: absolute;
-  top: 0;
-  left: 0;
-  transition: left 0.3s ease;
+  left: 50%;
+  transform: translate(-50%, 20px);
 }
 
 .showcase-sec__close {
@@ -943,6 +939,8 @@ footer .footer-btns {
       grid-row: 2 / span 1;
       align-self: start;
       text-align: center;
+      position: relative;
+      padding-bottom: 20px;
     }
     .showcase-sec__heading--two {
       grid-column: 3 / span 1;

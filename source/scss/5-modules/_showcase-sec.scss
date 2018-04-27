@@ -18,11 +18,10 @@
         height: 0; 
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
-        border-top: 20px solid $brand;
+        border-bottom: 20px solid $brand;
         position: absolute;
-        top: 0;
-        left: 0;
-        transition: left 0.3s ease;
+        left: 50%;
+        transform: translate(-50%, 20px);
     }
 
     &__close {
@@ -125,6 +124,8 @@
                 grid-row: 2 / span 1;
                 align-self: start;
                 text-align: center;
+                position: relative;
+                padding-bottom: 20px;
 
                 &--two {
                     grid-column: 3 / span 1;

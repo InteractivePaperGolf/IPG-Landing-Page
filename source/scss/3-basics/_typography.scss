@@ -1,37 +1,43 @@
 // Base Typography
 
-html {
+:root {
     font-size: 16px;
 }
 
 body {
-    font-family: $font;
+    font-family: $f-family;
     font-weight: $font-light;
-    @include fluid-type(font-size, $screen-min, $screen-max, $size-min, $size-max);
+    @include fluid-type(font-size, $screen-min, $screen-max, $f-p-size1, $f-p-size2);
     line-height: 1.5;
     color: $font-color;
 }
 
 // Headings
 
+h1,
+h2,
+h3,
+h4 {
+    font-family: $f-family-heading;
+    color: $font-dark-color;
+    font-weight: $font-bold;
+}
+
 h1, .h1 {
-    font-weight: 700;
-    @include fluid-type(font-size, $screen-min, $screen-max, $size-h1-min, $size-h1-max);
+    font-weight: $font-bolder;
+    @include fluid-type(font-size, $screen-min, $screen-max, $f-h1-size1, $f-h1-size2);
 }
 
 h2, .h2 {
-    font-weight: 700;
-    @include fluid-type(font-size, $screen-min, $screen-max, $size-h2-min, $size-h2-max);
+    @include fluid-type(font-size, $screen-min, $screen-max, $f-h2-size1, $f-h2-size2);
 }
 
 h3, .h3 {
-    font-weight: 700;
-    @include fluid-type(font-size, $screen-min, $screen-max, $size-h3-min, $size-h3-max);
+    @include fluid-type(font-size, $screen-min, $screen-max, $f-h3-size1, $f-h3-size2);
 }
 
 h4, .h4 {
-    font-weight: 500;
-    @include fluid-type(font-size, $screen-min, $screen-max, $size-h4-min, $size-h4-max);
+    @include fluid-type(font-size, $screen-min, $screen-max, $f-h4-size1, $f-h4-size2);
 }
 
 // Links 
@@ -44,11 +50,11 @@ a {
 // Classes
 
 .bigger {
-    @include fluid-type(font-size, $screen-min, $screen-max, $size-h4-min, $size-h4-max);
+    @include fluid-type(font-size, $screen-min, $screen-max, $f-h4-size1, $f-h4-size2);
 }
 
 .smaller {
-    @include fluid-type(font-size, $screen-min, $screen-max, $size-small-min, $size-small-max);
+    @include fluid-type(font-size, $screen-min, $screen-max, $f-small-size1, $f-small-size2);
 }
 
 .italic {

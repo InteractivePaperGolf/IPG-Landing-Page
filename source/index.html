@@ -8,28 +8,6 @@
     <meta name="author" content="Dominik Schelling, Joel Zambrano, Jan Christen, Dominik Hofer">
     <meta name="description" content="Interactive Papergolf ist ein spannendes &amp; einfach zu erlernendes Spiel für zwischendurch. Es wird nur Stift, Papier und z.B. ein Smartphone oder Tablet benötigt.">
 
-    <!-- Social -->
-    <!-- Search Engine -->
-    <meta name="description" content="Interactive Papergolf ist ein spannendes &amp; einfach zu erlernendes Spiel für zwischendurch. Es wird nur Stift, Papier und z.B. ein Smartphone oder Tablet benötigt.">
-    <meta name="image" content="http://papergolf.ch/assets/img/page_preview.png">
-    <!-- Schema.org for Google -->
-    <meta itemprop="name" content="Interactive Papergolf">
-    <meta itemprop="description" content="Interactive Papergolf ist ein spannendes &amp; einfach zu erlernendes Spiel für zwischendurch. Es wird nur Stift, Papier und z.B. ein Smartphone oder Tablet benötigt.">
-    <meta itemprop="image" content="http://papergolf.ch/assets/img/page_preview.png">
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Interactive Papergolf">
-    <meta name="twitter:description" content="Interactive Papergolf ist ein spannendes &amp; einfach zu erlernendes Spiel für zwischendurch. Es wird nur Stift, Papier und z.B. ein Smartphone oder Tablet benötigt.">
-    <meta name="twitter:image:src" content="http://papergolf.ch/assets/img/twitter_preview.png">
-    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta name="og:title" content="Interactive Papergolf">
-    <meta name="og:description" content="Interactive Papergolf ist ein spannendes &amp; einfach zu erlernendes Spiel für zwischendurch. Es wird nur Stift, Papier und z.B. ein Smartphone oder Tablet benötigt.">
-    <meta name="og:image" content="http://papergolf.ch/assets/img/og_preview.png">
-    <meta name="og:url" content="papergolf.ch">
-    <meta name="og:site_name" content="Interactive Papergolf">
-    <meta name="og:locale" content="de_DE">
-    <meta name="og:type" content="website">
-
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
@@ -49,7 +27,7 @@
     <meta name="theme-color" content="#04C956">
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="https://use.typekit.net/oul7ade.css">
+    <link rel="stylesheet" href="https://use.typekit.net/dwu8eik.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.min.css" />
@@ -91,7 +69,6 @@
         <section class="showcase-sec" id="tabs">
 
             <div class="showcase-sec__container" v-show="tabsOpen" @click="closeTab">
-                <div class="showcase-sec__arrow" :style="{ left: coords[activeTab - 1].tabLeft + 'px' }"></div>
                 <i class="showcase-sec__close" data-feather="x"></i>
             </div>
 
@@ -99,6 +76,7 @@
             <div class="showcase-sec__heading showcase-sec__heading--one wrapper" @click="tabClick(1)">
                 <h3 class="showcase-sec__title"><span class="brand">1.</span> Ausdrucken</h3>
                 <p class="showcase-sec__open smaller italic brand">klick mich</p>
+                <div class="showcase-sec__arrow" v-if="this.activeTab == 1 && this.tabsOpen && !this.small"></div>
             </div>
             <transition name="slide-fade" mode="out-in">
                 <h4 class="showcase-sec__subtitle" v-if="(this.activeTab == 1 && this.tabsOpen) || this.small">Der Spielplan.</h4>
@@ -119,6 +97,7 @@
             <div class="showcase-sec__heading showcase-sec__heading--two wrapper" @click="tabClick(2)">
                 <h3 class="showcase-sec__title"><span class="brand">2.</span> Regeln</h3>
                 <p class="showcase-sec__open smaller italic brand">klick mich</p>
+                <div class="showcase-sec__arrow" v-if="this.activeTab == 2 && this.tabsOpen && !this.small"></div>
             </div>
             <transition name="slide-fade" mode="out-in">
                 <h4 class="showcase-sec__subtitle" v-if="(this.activeTab == 2 && this.tabsOpen) || this.small">Die Anleitung.</h4>
@@ -139,6 +118,7 @@
             <div class="showcase-sec__heading showcase-sec__heading--three wrapper" @click="tabClick(3)">
                 <h3 class="showcase-sec__title"><span class="brand">3.</span> Spielen</h3>
                 <p class="showcase-sec__open smaller italic brand">klick mich</p>
+                <div class="showcase-sec__arrow" v-if="this.activeTab == 3 && this.tabsOpen && !this.small"></div>
             </div>
             <transition name="slide-fade" mode="out-in">
                 <h4 class="showcase-sec__subtitle" v-if="(this.activeTab == 3 && this.tabsOpen) || this.small">Die App.</h4>

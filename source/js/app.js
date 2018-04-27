@@ -38,28 +38,11 @@ var tabs = new Vue({
 	data: {
 		tabsOpen: false,
 		activeTab: 1,
-		windowWidth: 0,
-		coords: []
+		windowWidth: 0
 	},
 	methods: {
 		getWindowWidth: function(event) {
 			this.windowWidth = document.documentElement.clientWidth;
-		},
-		calculateCoords: function() {
-			this.coords = [
-				{
-					tabWidth: this.tabs[0].getBoundingClientRect().width,
-					tabLeft: this.tabs[0].getBoundingClientRect().left + (this.tabs[0].getBoundingClientRect().width / 2) - 20
-				},
-				{
-					tabWidth: this.tabs[1].getBoundingClientRect().width,
-					tabLeft: this.tabs[1].getBoundingClientRect().left + (this.tabs[1].getBoundingClientRect().width / 2) - 20
-				},
-				{
-					tabWidth: this.tabs[2].getBoundingClientRect().width,
-					tabLeft: this.tabs[2].getBoundingClientRect().left + (this.tabs[2].getBoundingClientRect().width / 2) - 20
-				}
-			]
 		},
 		closeTab: function() {
 			this.tabsOpen = false;
@@ -98,13 +81,6 @@ var tabs = new Vue({
 			} else {
 				return true;
 			}
-		},
-		tabs: function() {
-			var elements = [];
-			elements.push(document.getElementById('tab-one'));
-			elements.push(document.getElementById('tab-two'));
-			elements.push(document.getElementById('tab-three'));
-			return elements;
 		}
 	},
 	mounted: function() {
@@ -115,9 +91,6 @@ var tabs = new Vue({
 			//Init
 			this.getWindowWidth();
 		})
-	},
-	created: function() {
-		this.calculateCoords();
 	},
 	beforeDestroy: function() {
 		window.removeEventListener('resize', this.getWindowWidth);
