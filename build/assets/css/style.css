@@ -863,7 +863,6 @@ footer .footer-btns {
   height: 400px;
   max-width: 70vw;
   max-height: 70vw;
-  border-radius: 100%;
   object-fit: cover;
   margin: 20px auto 0 auto;
 }

@@ -4,9 +4,9 @@
     <!-- Meta-Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Interactive Papergolf</title>
+    <title>Papergolf</title>
     <meta name="author" content="Dominik Schelling, Joel Zambrano, Jan Christen, Dominik Hofer">
-    <meta name="description" content="Interactive Papergolf ist ein spannendes &amp; einfach zu erlernendes Spiel für zwischendurch. Es wird nur Stift, Papier und z.B. ein Smartphone oder Tablet benötigt.">
+    <meta name="description" content="Papergolf ist ein spannendes &amp; einfach zu erlernendes Spiel für zwischendurch. Es wird nur Stift, Papier und z.B. ein Smartphone oder Tablet benötigt.">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
@@ -72,7 +72,7 @@
                 <i class="showcase-sec__close" data-feather="x"></i>
             </div>
 
-            <img src="assets/img/tutorial_1.png" alt="Ausdrucken" class="showcase-sec__img" id="tab-one">
+            <img src="assets/img/tutorial_1.svg" alt="Ausdrucken" class="showcase-sec__img" id="tab-one">
             <div class="showcase-sec__heading showcase-sec__heading--one wrapper" @click="tabClick(1)">
                 <h3 class="showcase-sec__title"><span class="brand">1.</span> Ausdrucken</h3>
                 <p class="showcase-sec__open smaller italic brand">klick mich</p>
@@ -83,7 +83,7 @@
             </transition>
             <transition name="slide-fade" mode="out-in">
                 <div class="showcase-sec__info wrapper" v-if="(this.activeTab == 1 && this.tabsOpen) || this.small">
-                    <p class="showcase-sec__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ullam cumque dolores, cum quis ratione totam est? Voluptates, magnam nostrum! Voluptatibus doloremque maiores velit maxime quidem repellendus commodi accusamus delectus molestias deserunt, illo adipisci incidunt.</p>
+                    <p class="showcase-sec__desc">Um Papergolf spielen zu können, brauchst du eigentlich nicht viele Dinge: Neben einem Stift (am besten für jeden Spieler einen) ist aber natürlich der Spielplan sehr wichtig. Wenn du das Spiel schon ein paar mal gespielt hast, kannst du dir diesen gerne selber zeichnen, lass deiner Kreativität dabei ruhig freien Lauf! Für alle anderen haben wir bereits einen kompletten Spielplan entworfen, bestehend aus 18 verschiedenen Bahnen, die Abwechslung und Spass garantieren. Druck ihn dir einfach hier unten aus!</p>
                     <div class="showcase-sec__btns">
                         <a href="#" target="_blank" class="showcase-sec__btn btn btn--primary">Spielplan Download</a>
                         <div class="btn showcase-sec__next" @click="changeTab(2)">
@@ -93,7 +93,7 @@
                 </div>
             </transition>
 
-            <img src="assets/img/tutorial_1.png" alt="Ausdrucken" class="showcase-sec__img" id="tab-two">
+            <img src="assets/img/tutorial_2.svg" alt="Ausdrucken" class="showcase-sec__img" id="tab-two">
             <div class="showcase-sec__heading showcase-sec__heading--two wrapper" @click="tabClick(2)">
                 <h3 class="showcase-sec__title"><span class="brand">2.</span> Regeln</h3>
                 <p class="showcase-sec__open smaller italic brand">klick mich</p>
@@ -104,7 +104,7 @@
             </transition>
             <transition name="slide-fade" mode="out-in">
                 <div class="showcase-sec__info wrapper" v-if="(this.activeTab == 2 && this.tabsOpen) || this.small">
-                    <p class="showcase-sec__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ullam cumque dolores, cum quis ratione totam est? Voluptates, magnam nostrum! Voluptatibus doloremque maiores velit maxime quidem repellendus commodi accusamus delectus molestias deserunt, illo adipisci incidunt. Vero, expedita qui dicta iusto ut ad fugiat illum voluptatem vitae ducimus? Beatae laboriosam sapiente fugit quidem facilis aut expedita dolore sequi illo voluptatibus odio perspiciatis eveniet est aperiam velit libero minima eaque id eum ab asperiores, consectetur iure similique impedit. Accusantium dolore numquam saepe natus, culpa necessitatibus quos cum nisi earum quidem fugit ipsa repellat explicabo, iusto ab. Tempore mollitia sequi id fugiat culpa!</p>
+                    <p class="showcase-sec__desc">Natürlich kommt auch Papergolf nicht ganz ohne Spielregeln aus, doch es sind nur ein paar wenige und sie sind wirklich einfach zu erlernen. Um dich hier nicht mit einer Textanleitung zu langweilen, haben wir dir extra ein animiertes Anleitungsvideo erstellt, das du dir auf YouTube anschauen kannst:</p>
                     <div class="showcase-sec__btns">
                         <a href="https://www.youtube.com/watch?v=13owc4iGJH4" target="_blank" class="showcase-sec__btn btn btn--primary mediabox">Anleitungsvideo</a>
                         <div class="btn showcase-sec__next" @click="changeTab(3)">
@@ -114,7 +114,7 @@
                 </div>
             </transition>
 
-            <img src="assets/img/tutorial_1.png" alt="Ausdrucken" class="showcase-sec__img" id="tab-three">
+            <img src="assets/img/tutorial_3.svg" alt="Ausdrucken" class="showcase-sec__img" id="tab-three">
             <div class="showcase-sec__heading showcase-sec__heading--three wrapper" @click="tabClick(3)">
                 <h3 class="showcase-sec__title"><span class="brand">3.</span> Spielen</h3>
                 <p class="showcase-sec__open smaller italic brand">klick mich</p>
@@ -125,7 +125,7 @@
             </transition>
             <transition name="slide-fade" mode="out-in">
                 <div class="showcase-sec__info wrapper" v-if="(this.activeTab == 3 && this.tabsOpen) || this.small">
-                    <p class="showcase-sec__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ullam cumque dolores, cum quis ratione totam est? Voluptates, magnam nostrum! Voluptatibus doloremque maiores velit maxime quidem repellendus commodi accusamus delectus molestias deserunt, illo adipisci incidunt. Vero, expedita qui dicta iusto ut ad fugiat illum voluptatem vitae ducimus? Beatae laboriosam sapiente fugit quidem facilis aut expedita dolore sequi illo voluptatibus odio perspiciatis eveniet est aperiam velit libero minima eaque id eum ab asperiores, consectetur iure similique impedit. Accusantium dolore numquam saepe natus, culpa necessitatibus quos cum nisi earum quidem fugit ipsa repellat explicabo, iusto ab. Tempore mollitia sequi id fugiat culpa!</p>
+                    <p class="showcase-sec__desc">So, jetzt bist du eigentlich auch schon bereit um loszulegen! Aber etwas fehlt noch: Klick unten auf den Button, um die Webapp zu öffnen. Dort findest du dann die Aktionskarten, die das Spiel noch spannender und interaktiver machen. Und jetzt viel Spass beim Spielen!</p>
                     <a href="http://play.papergolf.ch" class="showcase-sec__btn btn btn--primary">Zur Webapp</a>
                 </div>
             </transition>
