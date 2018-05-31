@@ -22,24 +22,24 @@ main {
 
     // Breakpoint
 
-    @include breakpoint(medium) {
-        @include grid() {
-            grid-column: 1 / span 3;
-            grid-row: 2 / span 1;
+    // @include breakpoint(medium) {
+    //     @include grid() {
+    //         grid-column: 1 / span 3;
+    //         grid-row: 2 / span 1;
 
-            // Grid
+    //         // Grid
 
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 150px min-content;
+    //         display: grid;
+    //         grid-template-columns: 1fr;
+    //         grid-template-rows: 150px min-content;
 
-            .top-bar {
-                grid-column: 1 / span 5;
-                grid-row: 1 / span 1;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-    }
+    //         .top-bar {
+    //             grid-column: 1 / span 5;
+    //             grid-row: 1 / span 1;
+    //             display: flex;
+    //             justify-content: center;
+    //             align-items: center;
+    //         }
+    //     }
+    // }
 }

@@ -66,7 +66,7 @@
             </h2>
         </div>
 
-        <section class="showcase-sec" id="tabs">
+        <section class="showcase-sec wrapper--small" id="tabs">
 
             <div class="showcase-sec__container" v-show="tabsOpen" @click="closeTab">
                 <i class="showcase-sec__close" data-feather="x"></i>
@@ -78,10 +78,10 @@
                 <p class="showcase-sec__open smaller italic brand">klick mich</p>
                 <div class="showcase-sec__arrow" v-if="this.activeTab == 1 && this.tabsOpen && !this.small"></div>
             </div>
-            <transition name="slide-fade" mode="out-in">
+            <!-- <transition name="slide-fade" mode="out-in"> -->
                 <h4 class="showcase-sec__subtitle" v-if="(this.activeTab == 1 && this.tabsOpen) || this.small">Der Spielplan.</h4>
-            </transition>
-            <transition name="slide-fade" mode="out-in">
+            <!-- </transition> -->
+            <!-- <transition name="slide-fade" mode="out-in"> -->
                 <div class="showcase-sec__info wrapper" v-if="(this.activeTab == 1 && this.tabsOpen) || this.small">
                     <p class="showcase-sec__desc">Um Papergolf spielen zu können, brauchst du eigentlich nicht viele Dinge: Neben einem Stift (am besten für jeden Spieler einen) ist aber natürlich der Spielplan sehr wichtig. Wenn du das Spiel schon ein paar mal gespielt hast, kannst du dir diesen gerne selber zeichnen, lass deiner Kreativität dabei ruhig freien Lauf! Für alle anderen haben wir bereits einen kompletten Spielplan entworfen, bestehend aus 18 verschiedenen Bahnen, die Abwechslung und Spass garantieren. Druck ihn dir einfach hier unten aus!</p>
                     <div class="showcase-sec__btns">
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                 </div>
-            </transition>
+            <!-- </transition> -->
 
             <img src="assets/img/tutorial_2.svg" alt="Ausdrucken" class="showcase-sec__img" id="tab-two">
             <div class="showcase-sec__heading showcase-sec__heading--two wrapper" @click="tabClick(2)">
@@ -99,10 +99,10 @@
                 <p class="showcase-sec__open smaller italic brand">klick mich</p>
                 <div class="showcase-sec__arrow" v-if="this.activeTab == 2 && this.tabsOpen && !this.small"></div>
             </div>
-            <transition name="slide-fade" mode="out-in">
+            <!-- <transition name="slide-fade" mode="out-in"> -->
                 <h4 class="showcase-sec__subtitle" v-if="(this.activeTab == 2 && this.tabsOpen) || this.small">Die Anleitung.</h4>
-            </transition>
-            <transition name="slide-fade" mode="out-in">
+            <!-- </transition> -->
+            <!-- <transition name="slide-fade" mode="out-in"> -->
                 <div class="showcase-sec__info wrapper" v-if="(this.activeTab == 2 && this.tabsOpen) || this.small">
                     <p class="showcase-sec__desc">Natürlich kommt auch Papergolf nicht ganz ohne Spielregeln aus, doch es sind nur ein paar wenige und sie sind wirklich einfach zu erlernen. Um dich hier nicht mit einer Textanleitung zu langweilen, haben wir dir extra ein animiertes Anleitungsvideo erstellt, das du dir auf YouTube anschauen kannst:</p>
                     <div class="showcase-sec__btns">
@@ -112,7 +112,7 @@
                         </div>
                     </div>
                 </div>
-            </transition>
+            <!-- </transition> -->
 
             <img src="assets/img/tutorial_3.svg" alt="Ausdrucken" class="showcase-sec__img" id="tab-three">
             <div class="showcase-sec__heading showcase-sec__heading--three wrapper" @click="tabClick(3)">
@@ -120,15 +120,15 @@
                 <p class="showcase-sec__open smaller italic brand">klick mich</p>
                 <div class="showcase-sec__arrow" v-if="this.activeTab == 3 && this.tabsOpen && !this.small"></div>
             </div>
-            <transition name="slide-fade" mode="out-in">
+            <!-- <transition name="slide-fade" mode="out-in"> -->
                 <h4 class="showcase-sec__subtitle" v-if="(this.activeTab == 3 && this.tabsOpen) || this.small">Die App.</h4>
-            </transition>
-            <transition name="slide-fade" mode="out-in">
+            <!-- </transition> -->
+            <!-- <transition name="slide-fade" mode="out-in"> -->
                 <div class="showcase-sec__info wrapper" v-if="(this.activeTab == 3 && this.tabsOpen) || this.small">
                     <p class="showcase-sec__desc">So, jetzt bist du eigentlich auch schon bereit um loszulegen! Aber etwas fehlt noch: Klick unten auf den Button, um die Webapp zu öffnen. Dort findest du dann die Aktionskarten, die das Spiel noch spannender und interaktiver machen. Und jetzt viel Spass beim Spielen!</p>
                     <a href="http://play.papergolf.ch" class="showcase-sec__btn btn btn--primary">Zur Webapp</a>
                 </div>
-            </transition>
+            <!-- </transition> -->
 
         </section>     
 

@@ -10,17 +10,17 @@ footer {
 
     // Breakpoint 
 
-    @include breakpoint(small) {
-        @include grid() {
-            grid-column: 2 / span 1;
-            grid-row: 3 / span 1;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+    // @include breakpoint(small) {
+    //     @include grid() {
+    //         grid-column: 2 / span 1;
+    //         grid-row: 3 / span 1;
+    //         display: flex;
+    //         justify-content: space-between;
+    //         align-items: center;
 
-            .footer-btns {
-                order: 1;
-            }
-        }
-    }
+    //         .footer-btns {
+    //             order: 1;
+    //         }
+    //     }
+    // }
 }

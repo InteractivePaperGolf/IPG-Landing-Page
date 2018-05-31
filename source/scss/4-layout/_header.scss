@@ -11,10 +11,10 @@ header {
 
     // Breakpoint
 
-    @include breakpoint(medium) {
-        @include grid() {
-            grid-column: 2 / span 1;
-            grid-row: 1 / span 1;
-        }
-    }
+    // @include breakpoint(medium) {
+    //     @include grid() {
+    //         grid-column: 2 / span 1;
+    //         grid-row: 1 / span 1;
+    //     }
+    // }
 }
